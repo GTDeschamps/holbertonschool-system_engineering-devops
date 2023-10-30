@@ -1,1 +1,74 @@
+# _0-simple_web_stack_
 
+## Design of Web Stack
+
+![Web Stack](https://github.com/GTDeschamps/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/0-simple_web_stack.png?raw=true)
+## Differences between Server, Web Server, Application Server and Database Server:
+
+Server, Web server, Application server, and Database server are different types of servers used in the context of computer networks and web applications. Here's an overview of the key differences between them:
+
+1/ **Server**:
+
+A server is a computer or a software program that provides services or resources to other computers or clients over a network. Servers can handle various types of requests and are responsible for processing and responding to those requests.
+
+2/ **Web Server**:
+
+A web server is a specific type of server that is designed to handle HTTP (Hypertext Transfer Protocol) requests and serve web content to clients, typically web browsers. Web servers store and deliver web pages, images, scripts, and other web-related resources to users when they access a website. Popular web servers include Apache, Nginx, and Microsoft Internet Information Services (IIS).
+
+3/ **Application Server**:
+
+An application server is a server specifically designed to run applications and provide the necessary runtime environment for these applications. Application servers are used to host and execute web applications, including business logic and application-specific processes. They often interact with databases and can perform tasks like authentication, session management, and load balancing. Examples of application servers include Tomcat, WildFly (formerly JBoss), and Microsoft ASP.NET.
+
+4/ **Database Server**:
+
+A database server is a specialized server designed to store, manage, and provide access to databases. Database servers are responsible for handling database-related operations, such as data storage, retrieval, querying, and data manipulation. They may use database management systems (DBMS) like MySQL, PostgreSQL, Microsoft SQL Server, Oracle, or MongoDB to manage the data efficiently. Application servers and web servers often interact with database servers to access and manipulate data as needed for web applications.
+
+_In summary, a server is a broad term that refers to a computer or software that provides services, while a web server serves web content over HTTP. An application server hosts and manages web applications, providing a runtime environment for them, and a database server stores, manages, and provides access to databases. These servers often work together in web applications, with web servers handling client requests, application servers executing application logic, and database servers managing data storage and retrieval._
+
+## type of DNS record "www" is in www.foobar.com:
+
+The "www" in a domain like "www.foobar.com" is typically a subdomain, and it is represented as a "CNAME" (Canonical Name) DNS record. The CNAME record is used to alias one domain name to another. In this case, "www" is an alias for the root domain "foobar.com."
+
+When a user enters "www.foobar.com" in their web browser, the DNS system looks up the associated CNAME record and then resolves it to the actual domain name or IP address where the website's content is hosted. This allows for flexibility in managing web services and content by pointing the "www" subdomain to a specific server or hosting provider.
+
+It's important to note that while "www" is a common convention for web server subdomains, it's not mandatory. Websites can be configured to respond to requests for the root domain ("foobar.com") without requiring "www," or they can use other subdomains for different purposes. The choice of using "www" or not is largely a matter of preference and configuration by the website owner.
+
+## Role of domain name:
+
+The role of a domain name is fundamental in the functioning of the internet and web services. A domain name serves several important purposes:
+
+1. **Human-Friendly Naming**: Domain names provide a human-readable and memorable way to access websites and services on the internet. Instead of having to remember numeric IP addresses (e.g., 192.168.0.1), users can simply type in a domain name (e.g., www.example.com) into their web browsers.
+
+2. **Location Identifier**: Domain names serve as location identifiers for resources on the internet. They help users and computers locate and access websites, email servers, and other online services. When you enter a domain name in a web browser, the Domain Name System (DNS) translates it into the corresponding IP address, allowing your device to connect to the correct server.
+
+3. **Branding and Identity**: Domain names are crucial for branding and establishing an online identity. They help businesses and individuals create a unique online presence, and the choice of a domain name can reflect the purpose, content, or identity of a website or online service.
+
+4. **Email Addresses**: Domain names are also used to create custom email addresses. For example, if you own the domain "example.com," you can create email addresses like "yourname@example.com." Domain-based email addresses are commonly used for professional and personalized communication.
+
+5. **Server and Service Organization**: Domain names allow organizations to organize their web servers and services under a unified naming structure. Subdomains, such as "blog.example.com" or "store.example.com," can be used to categorize and differentiate various services and web content.
+
+6. **Global Accessibility**: Domain names are not restricted by geographical or network boundaries. They provide a globally accessible way to reach websites and services. This allows businesses and individuals to have a worldwide online presence.
+
+7. **Ownership and Control**: Domain names represent ownership and control over a specific online resource. When you own a domain name, you have the authority to configure its DNS settings, direct traffic to different servers, and manage its associated services.
+
+8. **Security**: Domain names can play a role in security, as they are often used to verify the authenticity of websites and protect against phishing attacks. SSL/TLS certificates are issued for domain names, assuring users that their connection to a website is encrypted and secure.
+
+_In summary, domain names are essential in making the internet more accessible, user-friendly, and organized. They serve as the primary means of locating and identifying online resources, businesses, and individuals, and they play a crucial role in branding and establishing a digital presence._
+
+
+## Protocol to communicate between the computer and the website
+
+When a user requests a website, the communication between the user's computer and the web server is primarily facilitated through the use of the Hypertext Transfer Protocol (HTTP) over the Transmission Control Protocol (TCP) and Internet Protocol (IP). Here's how it works:
+
+HTTP (Hypertext Transfer Protocol): HTTP is the protocol used for communication between a user's web browser (or client) and the web server. It defines how requests and responses should be formatted and transmitted. For secure communication, HTTPS (HTTP Secure) is used, which adds a layer of encryption using SSL/TLS protocols.
+
+TCP (Transmission Control Protocol): HTTP operates on top of the TCP protocol. TCP is responsible for ensuring reliable, ordered, and error-checked delivery of data packets between the user's computer and the web server. It establishes a connection and manages the transfer of data.
+
+IP (Internet Protocol): IP is used for routing and addressing the data packets between the user's computer and the web server. It determines how data is packetized and sent across the internet to reach its destination (the web server).
+# Authors of project
+
+
+
+Gael Deschamps 
+
+From #C21 Holberton School Laval 
