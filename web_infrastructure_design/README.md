@@ -1,8 +1,9 @@
-# _0-simple_web_stack_
+# README of  "Web Infrastructure" Project
 
-## Design of Web Stack
+# 0. Simple web stack
 
-![Web Stack](https://github.com/GTDeschamps/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/0-simple_web_stack.png?raw=true)
+![Web Stack](https://raw.githubusercontent.com/GTDeschamps/holbertonschool-system_engineering-devops/00a644bc653d1aa2d02835f1ef07a16464028d32/web_infrastructure_design/1-distributed_web_infrastructure.drawio.svg)
+
 ## Differences between Server, Web Server, Application Server and Database Server:
 
 Server, Web server, Application server, and Database server are different types of servers used in the context of computer networks and web applications. Here's an overview of the key differences between them:
@@ -65,6 +66,57 @@ HTTP (Hypertext Transfer Protocol): HTTP is the protocol used for communication 
 TCP (Transmission Control Protocol): HTTP operates on top of the TCP protocol. TCP is responsible for ensuring reliable, ordered, and error-checked delivery of data packets between the user's computer and the web server. It establishes a connection and manages the transfer of data.
 
 IP (Internet Protocol): IP is used for routing and addressing the data packets between the user's computer and the web server. It determines how data is packetized and sent across the internet to reach its destination (the web server).
+
+# 1. Distributed web infrastructure
+![Distributed web infrastructure](https://raw.githubusercontent.com/GTDeschamps/holbertonschool-system_engineering-devops/527b39167289621ae1cf125f700adce8ed69603d/web_infrastructure_design/1-distributed_web_infrastructure.drawio.svg)
+
+##  what is a Load-Balancer
+
+A load balancer is a critical component in network and server architecture that helps distribute incoming network traffic or requests across multiple servers or resources. The primary purpose of a load balancer is to optimize resource utilization, maximize throughput, minimize response time, and ensure high availability of services or applications.
+
+There are two common load balancing setups: Active-Active and Active-Passive.
+
+1. Active-Active Load Balancer:
+- In an Active-Active setup, all the servers or resources are actively handling traffic simultaneously.
+- Incoming requests are distributed evenly or according to a specified algorithm across all the available servers.
+- This setup is typically used to balance the load across multiple servers, ensuring that all resources are utilized and providing redundancy in case one server fails.
+- Active-Active configurations are often used for high-demand, highly available services like web applications, where multiple servers are needed to handle the traffic.
+
+2. Active-Passive Load Balancer:
+- In an Active-Passive setup, one server or resource (the "active" server) handles incoming traffic, while the other servers (the "passive" servers) remain on standby.
+- The active server is the primary one that processes incoming requests, and the passive servers are only used when the active server fails or needs maintenance.
+- This configuration is primarily used for failover and redundancy purposes, ensuring that the service remains available even if the primary server experiences issues.
+- Active-Passive load balancing is often used for critical services where any downtime is unacceptable, like databases, where one server is processing transactions, and others are ready to take over in case of a failure.
+
+Key Differences:
+- Active-Active load balancing distributes traffic across multiple servers, all of which are actively handling requests, while Active-Passive load balancing uses one active server and others in standby.
+- Active-Active setups are designed for load distribution and resource utilization, whereas Active-Passive setups are designed for redundancy and failover.
+- Active-Active setups are suitable for applications with high traffic, where scaling resources is essential. Active-Passive setups are more about ensuring high availability.
+- In Active-Active load balancing, all servers are continuously processing requests, which can be more resource-intensive compared to Active-Passive setups, where some servers remain idle until needed.
+- Active-Active setups can handle more traffic but require careful configuration to ensure even distribution. Active-Passive setups are simpler to manage but don't utilize resources as efficiently.
+
+The choice between these configurations depends on your specific needs, the nature of your services, and your tolerance for downtime or resource underutilization. Many organizations use a combination of both approaches to balance traffic and ensure high availability.
+
+## what is a "MySQL master-Replica" cluster
+
+A MySQL Master-Replica cluster, also known as a Master-Slave or Primary-Secondary cluster, is a common database architecture used to ensure high availability and data redundancy. In this setup, one MySQL server acts as the "master" or "primary," while one or more other MySQL servers act as "replicas" or "slaves." Replication is the process used to keep data synchronized between the master and the replicas.
+
+Here's how MySQL Master-Replica replication works:
+
+Master Server (Primary):
+
+The master server is the primary database server that handles all write operations and changes to the database.
+It contains the authoritative copy of the data.
+Replica Servers (Secondary):
+
+Replica servers are secondary database servers that replicate data from the master.
+They serve read operations, which makes them suitable for handling read-heavy workloads.
+Replicas are kept in sync with the master by copying the data and changes from the master server.
+Replication Process:
+
+When data is modified on the master server (e.g., an INSERT, UPDATE, DELETE operation), the master records the changes in its binary log (binlog).
+The replicas continuously monitor the binlog on the master to identify changes.
+Replicas apply the same changes to their own database copies, effectively mirroring the master's data.
 # Authors of project
 
 
