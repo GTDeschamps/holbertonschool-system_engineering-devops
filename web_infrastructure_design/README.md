@@ -68,7 +68,7 @@ TCP (Transmission Control Protocol): HTTP operates on top of the TCP protocol. T
 IP (Internet Protocol): IP is used for routing and addressing the data packets between the user's computer and the web server. It determines how data is packetized and sent across the internet to reach its destination (the web server).
 
 # 1. Distributed web infrastructure
-![Distributed web infrastructure](https://raw.githubusercontent.com/GTDeschamps/holbertonschool-system_engineering-devops/527b39167289621ae1cf125f700adce8ed69603d/web_infrastructure_design/1-distributed_web_infrastructure.drawio.svg)
+![Distributed web infrastructure](https://github.com/GTDeschamps/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/1-distributed_web_infrastructure.png?raw=true)
 
 ##  what is a Load-Balancer
 
