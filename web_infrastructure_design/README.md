@@ -2,7 +2,7 @@
 
 # 0. Simple web stack
 
-![Web Stack](https://raw.githubusercontent.com/GTDeschamps/holbertonschool-system_engineering-devops/00a644bc653d1aa2d02835f1ef07a16464028d32/web_infrastructure_design/1-distributed_web_infrastructure.drawio.svg)
+![Web Stack](https://github.com/GTDeschamps/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/0-simple_web_stack.png?raw=true)
 
 ## Differences between Server, Web Server, Application Server and Database Server:
 
