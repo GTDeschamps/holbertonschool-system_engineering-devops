@@ -158,12 +158,19 @@ Firewalls are a fundamental component of network security, and they help protect
 
 Monitoring in web infrastructure is the practice of systematically observing and collecting data about performance, availability, security, and resource utilization to ensure the web application functions optimally, stays available, and remains secure. It involves tracking metrics, generating alerts, and providing insights for proactive management and rapid issue response.
 
+# 3. Scale up the infrastructure
 
+![Scale up](https://github.com/GTDeschamps/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/3-scale_up.png?raw=true)
 
+## conclusion: importance of redundancy
+
+Redundancy in web infrastructure is crucial for ensuring high availability and fault tolerance. It involves duplicating critical components and data so that if one fails, another can seamlessly take over. This minimizes downtime, maintains reliability, and ensures uninterrupted service, which is essential for web applications and services to meet user expectations and business needs.
+
+___________________________________________________________________________________
 # Authors of project
 
 
 
-Gael Deschamps
+Gael Deschamps 
 
-From #C21 Holberton School Laval
+From #C21 Holberton School Laval 
