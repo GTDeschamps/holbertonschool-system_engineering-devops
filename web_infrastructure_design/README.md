@@ -117,10 +117,53 @@ Replication Process:
 When data is modified on the master server (e.g., an INSERT, UPDATE, DELETE operation), the master records the changes in its binary log (binlog).
 The replicas continuously monitor the binlog on the master to identify changes.
 Replicas apply the same changes to their own database copies, effectively mirroring the master's data.
+
+# 2. Secured and monitored web infrastructure
+
+![Secured and monitored web infrastructure](https://github.com/GTDeschamps/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/2-secured_and_monitored_web_infrastructure.png?raw=true)
+
+## what is a Firewall (and his place in Web infrastructure)
+
+A firewall is a network security device or software that acts as a barrier between a trusted network (like a company's internal network) and untrusted networks (such as the internet). Its primary purpose is to control the flow of network traffic and enforce security policies to protect the trusted network from unauthorized access, cyberattacks, and other potential threats.
+
+Firewalls play a crucial role in web infrastructure by providing several key functions:
+
+1. Packet Filtering: Firewalls examine packets of data as they travel between networks and make decisions based on predefined rules. They can allow or block traffic based on factors like source IP addresses, destination IP addresses, port numbers, and protocols.
+
+2. Stateful Inspection: Modern firewalls often use stateful inspection to track the state of active connections. This allows them to make more intelligent decisions about allowing or denying traffic based on the context of the communication.
+
+3. Proxy Services: Some firewalls can act as proxies, mediating communication between internal and external systems. They can cache web content, providing an additional layer of security and potentially improving performance.
+
+4. Application Layer Filtering: Next-generation firewalls can inspect traffic at the application layer, making decisions based on the specific applications or services being accessed. This is especially useful for blocking threats and controlling access to specific web services.
+
+5. Intrusion Detection and Prevention: Firewalls can incorporate intrusion detection and prevention systems (IDPS) to identify and block suspicious or malicious activities. This helps protect against attacks like malware, denial-of-service (DoS) attacks, and other security threats.
+
+6. Virtual Private Network (VPN) Support: Many firewalls support VPNs, enabling secure communication over public networks. This is essential for remote access and connecting branch offices to the central network securely.
+
+7. Logging and Reporting: Firewalls often maintain logs of network activities, which are critical for auditing and forensic analysis. They can generate reports to help network administrators understand the traffic patterns and potential security incidents.
+
+In web infrastructure, firewalls are typically placed at various points to safeguard different layers of a network, including:
+
+1. Perimeter Firewalls: These are positioned at the network's edge, between the internal network and the internet. They protect the entire network from external threats and unauthorized access.
+
+2. Internal Firewalls: These are deployed within the internal network to segment it into separate security zones, ensuring that even if a threat breaches the perimeter, it cannot easily move laterally within the network.
+
+3. Host-based Firewalls: These run on individual devices (e.g., servers or endpoints) and provide an additional layer of defense. They control traffic at the device level and can be used to enforce specific security policies.
+
+4. Cloud Firewalls: In cloud-based web infrastructure, cloud providers often offer firewall services to control inbound and outbound traffic for virtual machines, containers, and other cloud resources.
+
+Firewalls are a fundamental component of network security, and they help protect web infrastructure from a wide range of cyber threats, making them a critical element in maintaining the security and integrity of online services and data.
+
+## What's the Monitoring
+
+Monitoring in web infrastructure is the practice of systematically observing and collecting data about performance, availability, security, and resource utilization to ensure the web application functions optimally, stays available, and remains secure. It involves tracking metrics, generating alerts, and providing insights for proactive management and rapid issue response.
+
+
+
 # Authors of project
 
 
 
-Gael Deschamps 
+Gael Deschamps
 
-From #C21 Holberton School Laval 
+From #C21 Holberton School Laval
